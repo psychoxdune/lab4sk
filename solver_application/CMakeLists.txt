@@ -1,5 +1,8 @@
-cmake_minimum_required(VERSION 3.4)
-project(solver)
+add_executable(equation
+    solver.cpp
+)
 
-add_executable(solver solver.cpp)
-target_link_libraries(solver formatter_ex solver_lib)
+target_link_libraries(equation
+    solver
+    formatter_ex
+)

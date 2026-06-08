@@ -1,8 +1,11 @@
-#include <iostream>
-#include "formatter_ex.hpp"
 #include "solver.hpp"
-int main() {
-    int result = solve(2, 3);
-    std::cout << format_ex("Result: " + std::to_string(result)) << std::endl;
-    return 0;
+
+#include <cmath>
+
+void solve(double a, double b, double c, double& x1, double& x2)
+{
+    double d = b * b - 4 * a * c;
+
+    x1 = (-b + std::sqrt(d)) / (2 * a);
+    x2 = (-b - std::sqrt(d)) / (2 * a);
 }
